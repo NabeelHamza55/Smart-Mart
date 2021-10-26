@@ -1,0 +1,383 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+
+/* Universal CSS */
+
+a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 10px;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+a:focus {
+    color: red;
+}
+
+.wbutton {
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.wbutton:hover {
+    background-color: white;
+    color: black;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.bbutton {
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.bbutton:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.input-group>input:focus {
+    box-shadow: none;
+}
+
+.input-group>button:focus {
+    box-shadow: none;
+}
+
+.login-with>h4 {
+    font-size: 26px;
+}
+
+
+/* Hero-header */
+
+.hero-header {
+    background-position: center;
+    background-size: cover;
+    color: white;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 0px 25px 25px;
+    -webkit-border-radius: 0px 0px 25px 25px;
+    -moz-border-radius: 0px 0px 25px 25px;
+    -ms-border-radius: 0px 0px 25px 25px;
+    -o-border-radius: 0px 0px 25px 25px;
+    padding: 30vh 5vh;
+}
+
+.hero-content>h1{
+    font-size: 45px;
+}
+/* Center Block Content */
+
+.center-content {
+    padding: 30px;
+}
+
+.box1 {
+    order: 2;
+    background-color: blueviolet;
+    width: 100%;
+    height: 80vh;
+    padding: 25px;
+    margin: 30px 0px 0px 0px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box1:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    background-color: rgba(125, 125, 125, 0.5);
+    z-index: -1;
+    filter: blur(15px);
+}
+
+.box1 a>h1 {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    padding: 25px 50px;
+    right: 10%;
+    left: 10%;
+    color: white;
+}
+
+.box2 {
+    order: 1;
+    width: 100%;
+    height: 70vh;
+    margin: 15px 0px 0px 0px;
+}
+
+.box3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: red;
+    width: 100%;
+    height: 38vh;
+    border-radius: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.box3:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    background-color: rgba(125, 125, 125, 0.5);
+    z-index: -1;
+    filter: blur(15px);
+}
+
+.box3 a>h1 {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    left: 15%;
+    color: white;
+    padding: 15px 16%;
+}
+
+.box4 {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: yellow;
+    height: 38vh;
+    border-radius: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.box4:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 4%;
+    width: 90%;
+    height: 20%;
+    background-color: rgba(125, 125, 125, 0.5);
+    z-index: -1;
+    filter: blur(15px);
+}
+
+.box4 a>h1 {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    left: 15%;
+    color: white;
+    padding: 15px 8%;
+}
+
+.box5 {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: green;
+    width: 100%;
+    height: 39vh;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.box5:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    background-color: rgba(125, 125, 125, 0.5);
+    z-index: -1;
+    filter: blur(15px);
+}
+
+.box5 {
+    padding: 4% 10%;
+    color: white;
+}
+
+.box5 button {
+    padding: 15px 30px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    position: absolute;
+    bottom: 15%;
+    outline: none;
+    border: none;
+}
+
+.box5 button:hover {
+    background-color: black;
+    color: white;
+    transition: all ease 0.5s;
+}
+.box5>h1{
+    font-size: 30px;
+    
+
+/* Block End */
+
+
+/* Featured Products */
+.product-display{
+    width: 250px;
+    height: 500px;
+}
+.fp-img {
+    width: 200px;
+}
+
+.stars {
+    background-color: lightgreen;
+    padding: 5px 7px;
+    width: 60px;
+    border-radius: 10px;
+    margin: 3px 0px;
+}
+/* Shop Product */
+.product-box {
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+/* About Us Page */
+
+.a-ads-area {
+    margin-top: -130px;
+}
+ /*  
+.team-cover-img {
+    background-color: rgb(44, 44, 44);
+    width: 100%;
+    height: 185px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    margin: auto;
+    
+}
+.team-cover-img:hover{
+    background-color: rgb(44, 44, 44);
+}
+
+.team-dp-img {
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+*/
+.team-dp-img>img{
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.team-text {
+    background-color: rgb(206, 202, 202);
+    padding: 107px 0px 0px 25px;
+    width: 100%;
+    height: 200px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    margin: 0px;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+}
+.team-text:hover {
+    color: white;
+    background-color: rgb(44, 44, 44)
+}
+
+/* Contact US Page */
+
+/* Contact Us Form Css Start */
+
+.quick-nav {
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+/* Space box */
+

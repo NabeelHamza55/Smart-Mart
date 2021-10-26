@@ -1,0 +1,208 @@
+/* Top Bar */
+
+.top {
+    background-color: black;
+    color: white;
+}
+
+.user-note>a,
+.user-panel>a {
+    color: white;
+}
+
+.user-note>a:hover,
+.user-panel>a:hover {
+    color: lightblue;
+}
+
+.user-note>a:focus,
+.user-panel>a:focus {
+    color: red;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background-color: rgb(245, 245, 245);
+    color: black;
+    list-style: none;
+    padding: 10px 30px;
+}
+
+.navbar>li {
+    padding: 5px;
+}
+
+.navbar>li>a {
+    display: block;
+}
+
+nav>.title-h {
+    font-size: 26px;
+}
+
+.title-h>a:hover {
+    color: black;
+}
+
+.item>a {
+    color: black;
+}
+
+.item>a:hover {
+    border-bottom: 2px black solid;
+}
+.active>a{
+    border-bottom: 2px black solid;
+}
+
+
+/* For Small Screen Devices */
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toggle {
+    cursor: pointer;
+    order: 1;
+    padding: 0px;
+}
+
+.nav-c {
+    margin: 0px 20px;
+    order: 3;
+}
+
+.search-btn {
+    border-bottom: 1px solid rgba(218, 196, 196, 0.713);
+    border-top: 1px solid rgba(218, 196, 196, 0.713);
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 2;
+    display: none;
+}
+
+.item.active {
+    display: block;
+}
+
+
+/* bars */
+
+.bars {
+    background-color: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 20px;
+}
+
+.bars::before,
+.bars::after {
+    background-color: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 20px;
+}
+
+.bars::before {
+    top: 7px;
+}
+
+.bars::after {
+    top: -7px;
+}
+
+
+/* For Medium Screen Devices */
+
+@media all and (min-width: 480px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title-h {
+        flex: 1;
+    }
+    .item.nav-c {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle {
+        order: 1;
+    }
+    .search-btn {
+        border-bottom: 0px;
+        border-top: 0px;
+    }
+    .input-group>input {
+        border-radius: 25px 0px 0px 25px;
+        -webkit-border-radius: 25px 0px 0px 25px;
+        -moz-border-radius: 25px 0px 0px 25px;
+        -ms-border-radius: 25px 0px 0px 25px;
+        -o-border-radius: 25px 0px 0px 25px;
+    }
+    .input-group>button {
+        border-radius: 0px 25px 25px 0px;
+        -webkit-border-radius: 0px 25px 25px 0px;
+        -moz-border-radius: 0px 25px 25px 0px;
+        -ms-border-radius: 0px 25px 25px 0px;
+        -o-border-radius: 0px 25px 25px 0px;
+    }
+    .cart-btn>a {
+        background-color: black;
+        color: white;
+        padding: 5px 30px;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+    }
+    .cart-btn>a:hover {
+        background-color: blueviolet;
+        color: white;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+}
+
+
+/* For Medium Screen Devices */
+
+@media screen and (min-width: 787px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .title-h {
+        order: 1;
+    }
+    .item {
+        order: 1;
+    }
+    .nav-c {
+        order: 3;
+    }
+    .search-btn {
+        margin: auto;
+    }
+}

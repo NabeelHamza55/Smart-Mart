@@ -1,0 +1,14 @@
+.round_border{
+     border-radius: 15px;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus{
+     outline: none;
+     box-shadow: none;
+}
+.form-control:focus, .custom-select:focus{
+     outline: none;
+     box-shadow: none;
+}
+th, td{
+     vertical-align: middle;
+}

@@ -1,0 +1,37 @@
+@media screen and (min-width: 991px) {
+    .login-container {
+        height: 90vh;
+        padding: 50px;
+    }
+    /* Hero-header */
+    .hero-content>.c-container {
+        max-width: 50%;
+    }
+}
+
+
+/*  */
+
+@media screen and (max-width: 768px) {
+    .space-box {
+        margin-bottom: 300px;
+    }
+    .box5>h1 {
+        font-size: 26px;
+    }
+    .box1>a>h1 {
+        font-size: 36px
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .box1>a>h1 {
+        font-size: 24px
+    }
+    .box3>a>h1 {
+        font-size: 28px
+    }
+    .box4>a>h1 {
+        font-size: 28px
+    }
+}
