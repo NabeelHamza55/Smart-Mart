@@ -40,7 +40,7 @@ if (isset($_POST['order_pay'])) {
                }
                unset($_SESSION['cart']);
                echo "<script>
-          window.location.href='https://php.test/Cart.php';
+          window.location.href='/Cart.php';
           alert('Order Placed Successfully');
           </script>";
           }

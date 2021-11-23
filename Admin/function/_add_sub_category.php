@@ -1,6 +1,6 @@
 <?php
 
- 
+
  $error_exist = "";
  $successful = "";
      function add_sub_category(){
@@ -20,9 +20,9 @@
                     if (mysqli_query($db, $insert_query)) {
                          # code...
                          $successful = "Sub_Category Added Successfully <br>";
-                         echo '<script> 
+                         echo '<script>
                          alert("Sub_Category Added Successfully");
-                         window.location.href="https://php.test/Admin/_CategoryS_list.php"; </script>';
+                         window.location.href="/Admin/_CategoryS_list.php"; </script>';
                          mysqli_close($db);
                     }
                }
@@ -51,9 +51,9 @@
                     if (mysqli_query($db, $update_query)) {
                          # code...
                          $successful = "Sub_Category Updated Successfully <br>";
-                         echo '<script> 
+                         echo '<script>
                          alert("Sub_Category Updated Successfully");
-                         window.location.href="https://php.test/Admin/_CategoryS_list.php"; </script>';
+                         window.location.href="/Admin/_CategoryS_list.php"; </script>';
                          mysqli_close($db);
                     }
                }

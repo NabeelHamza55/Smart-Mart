@@ -18,9 +18,9 @@
                     if (mysqli_query($db, $insert_query)) {
                          # code...
                        $successful = "Category Added Successfully <br>";
-                       echo '<script> 
+                       echo '<script>
                        alert("Category Added Successfully");
-                       window.location.href="https://php.test/Admin/_Category_list.php"; </script>';
+                       window.location.href="/Admin/_Category_list.php"; </script>';
                        mysqli_close($db);
                     }
                }
@@ -46,9 +46,9 @@
                     if (mysqli_query($db, $insert_query)) {
                          # code...
                          $successful = "Category Updated Successfully <br>";
-                       echo '<script> 
+                       echo '<script>
                          alert("Category Updated Successfully");
-                         window.location.href="https://php.test/Admin/_Category_list.php"; </script>';
+                         window.location.href="/Admin/_Category_list.php"; </script>';
                          mysqli_close($db);
                     }
                }

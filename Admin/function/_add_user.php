@@ -48,7 +48,7 @@
                                $("#disable_option").addClass("disabled");
                          });
                            </script>';
-                         }     
+                         }
                     }
                }
           }
@@ -76,13 +76,11 @@
                $insert_data = "INSERT INTO users (first_name, last_name, username, email, password, u_type_fk) VALUES ('$f_name', '$l_name', '$username', '$email', '$password', '$user_type')";
                if(mysqli_query($db, $insert_data)){
                     echo "<script>
-                    window.location.href='../admin/_User_list.php'
+                    window.location.href='/admin/_User_list.php'
                     </script>";
                }
           }
      }
-     
+
 
 ?>
-
-   

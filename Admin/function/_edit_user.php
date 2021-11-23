@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
      // Validation
@@ -49,7 +49,7 @@
                                $("#disable_option").addClass("disabled");
                          });
                            </script>';
-                         }     
+                         }
                     }
                }
           }
@@ -77,16 +77,16 @@
                $insert_data = "UPDATE users SET first_name = '$f_name', last_name = '$l_name', username = '$username', email = '$email', password = '$password', u_type_fk = '$user_type'";
                if(mysqli_query($db, $insert_data)){
                     echo "<script>
-                    window.location.href='../admin/_User_list.php'
+                    window.location.href='/admin/_User_list.php'
                     </script>";
                }
           }
      }
-     
+
 
 ?>
 
-   
+
 
 
 

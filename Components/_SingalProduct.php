@@ -51,8 +51,7 @@ $quantity = $s_product['quantity']; ?>
 
                 <?php } ?>
                 <div class="col-lg-7 col-sm-12 p-2">
-                    <button
-                        onclick="window.location.href='./Comparison.php?name=<?php echo $s_product['unique_id']; ?>'"
+                    <button onclick="window.location.href='/Comparison.php?name=<?php echo $s_product['unique_id']; ?>'"
                         class="btn btn-secondary compare-btn"> Compare Product</button>
                 </div>
             </div>
@@ -227,7 +226,7 @@ $quantity = $s_product['quantity']; ?>
                $insert_data = "INSERT INTO COMMENTS (comment, username, email, rating, product_name) VALUES ('$comment', '$name', '$email', '$rating', '$c_product_id')";
                if (mysqli_query($db, $insert_data)) {
                     echo "<script> alert('Successfull');
-                    window.location.href='../Singal_Page_Product.php?id=<?php $ ?>'
+                    window.location.href='/Singal_Page_Product.php?id=<?php $ ?>'
         </script>";
         }
         }else {
