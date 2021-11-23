@@ -37,11 +37,11 @@
                               # code...
                               $errors['email'] = "User Already Exist";
                          }
-                    }     
+                    }
                }
           }
 
-          
+
 
           # code for check password
           if(empty($_POST['password'])){
@@ -70,8 +70,8 @@
                }
           }
      }
-     
-     
+
+
 
 
 ?>

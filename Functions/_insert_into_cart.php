@@ -16,7 +16,7 @@ if (isset($_POST['insert_into_cart'])) {
      $_SESSION["cart"][$product_id] = array("Product_Name" =>$product_name, "Product_quantity"=> $product_quantity, "Product_Price"=> $product_price, "Product_id"=> $product_id);
      echo '<script> alert("Product Added To Cart Successfully") </script>';
      // session_destroy();
-      header('Location: http://php.test/Singal_Page_Product.php?id='.$product_id);
+      header('Location: /Singal_Page_Product.php?id='.$product_id);
       //echo '<pre>';
       //print_r($_SESSION["cart"]);
       //echo '</pre>';
