@@ -10,13 +10,13 @@
           if (isset($_POST['submit_s_cat'])) {
                $sub_category = $_POST['add_s_cat'];
                $cat_selector = $_POST['select_cat'];
-               $check_query = "SELECT * FROM SUB_CATEGORIES WHERE sub_category = '$sub_category'";
+               $check_query = "SELECT * FROM sub_categories WHERE sub_category = '$sub_category'";
                $check_result = mysqli_query($db, $check_query);
                $check_rows = mysqli_num_rows($check_result);
                if ($check_rows > 0) {
                    $error_exist = "Sub_Category Already Exist <br>";
                }else{
-                    $insert_query = "INSERT INTO SUB_CATEGORIES (sub_category, parent_category) VALUES ('$sub_category', '$cat_selector')";
+                    $insert_query = "INSERT INTO sub_categories (sub_category, parent_category) VALUES ('$sub_category', '$cat_selector')";
                     if (mysqli_query($db, $insert_query)) {
                          # code...
                          $successful = "Sub_Category Added Successfully <br>";
@@ -41,7 +41,7 @@
           if (isset($_POST['update_s_cat'])) {
                $sub_category = $_POST['edit_s_cat'];
                $cat_selector = $_POST['edit_cat_selector'];
-               $check_query = "SELECT * FROM SUB_CATEGORIES WHERE sub_category = '$sub_category'";
+               $check_query = "SELECT * FROM sub_categories WHERE sub_category = '$sub_category'";
                $check_result = mysqli_query($db, $check_query);
                $check_rows = mysqli_num_rows($check_result);
                if ($check_rows > 0) {

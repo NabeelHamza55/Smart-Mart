@@ -3,6 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
+
 // Create connection
 $db = new mysqli($servername, $username, $password);
 mysqli_select_db($db, 'smartmart');

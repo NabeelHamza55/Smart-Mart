@@ -18,7 +18,7 @@
                $short_disc = $_POST['short_disc'];
                $long_disc = $_POST['long_disc'];
 
-               $check_query = "SELECT * FROM PRODUCTS WHERE unique_id = '$unique_id'";
+               $check_query = "SELECT * FROM products WHERE unique_id = '$unique_id'";
                $check_result = mysqli_query($db, $check_query);
                $check_rows = mysqli_num_rows($check_result);
                if ($check_rows > 0) {
@@ -67,7 +67,7 @@
                // $upload_dir = 'uploads';
                // move_uploaded_file($file_temp, $upload_dir."/".$filename);
 
-                    $insert_query = "INSERT INTO PRODUCTS (product_name, unique_id, brand, category_fk, sub_cat_fk, price, quantity, s_discription, l_discription, picture) VALUES ('$product_name', '$unique_id', '$brand_name', '$cat_selector', '$sub_cat_selector', '$sale_price', '$quantity', '$short_disc', '$long_disc', '$p_picture')";
+                    $insert_query = "INSERT INTO products (product_name, unique_id, brand, category_fk, sub_cat_fk, price, quantity, s_discription, l_discription, picture) VALUES ('$product_name', '$unique_id', '$brand_name', '$cat_selector', '$sub_cat_selector', '$sale_price', '$quantity', '$short_disc', '$long_disc', '$p_picture')";
                     if (mysqli_query($db, $insert_query)) {
                          # code...
                          $successful = "Product Added Successfully <br>";

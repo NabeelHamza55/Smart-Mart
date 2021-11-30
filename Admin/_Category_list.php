@@ -13,7 +13,7 @@ include('./function/db_connection.php');
         </div>
     </div>
     <?php
-     $fetch_cat = "SELECT * FROM CATEGORIES ORDER BY id ASC";
+     $fetch_cat = "SELECT * FROM categories ORDER BY id ASC";
      $cat_result = mysqli_query($db, $fetch_cat);
      $cat_rows = mysqli_num_rows($cat_result);
      if ($cat_rows > 0) {

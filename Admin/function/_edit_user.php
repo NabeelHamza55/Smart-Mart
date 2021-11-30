@@ -35,7 +35,7 @@
                     $errors['email'] = "Email is invalid";
                }else {
                     # code...
-                    $check_user_query = "SELECT * FROM USERS WHERE username = '$username' AND email = '$email'";
+                    $check_user_query = "SELECT * FROM users WHERE username = '$username' AND email = '$email'";
                     $result = mysqli_query($db, $check_user_query);
                     $rows = mysqli_num_rows($result);
                     if($rows > 0){

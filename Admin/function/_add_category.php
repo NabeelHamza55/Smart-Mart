@@ -14,7 +14,7 @@
                if ($check_rows > 0) {
                    $error_exist = "Category Already Exist <br>";
                }else{
-                    $insert_query = "INSERT INTO CATEGORIES (category) VALUES ('$category')";
+                    $insert_query = "INSERT INTO categories (category) VALUES ('$category')";
                     if (mysqli_query($db, $insert_query)) {
                          # code...
                        $successful = "Category Added Successfully <br>";
@@ -36,7 +36,7 @@
           $cat_id = $_GET['id'];
           if (isset($_POST['update_cat'])) {
                $category = $_POST['edit_cat'];
-               $check_query = "SELECT * FROM CATEGORIES WHERE category = '$category'";
+               $check_query = "SELECT * FROM categories WHERE category = '$category'";
                $check_result = mysqli_query($db, $check_query);
                $check_rows = mysqli_num_rows($check_result);
                if ($check_rows > 0) {
