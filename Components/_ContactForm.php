@@ -53,7 +53,7 @@
             <!-- Quick Links Block -->
             <div class="quick-nav list-group container">
                 <h4>Quick links</h4>
-                <li class="list-group-item"><a href="/INDEX.php">Home</a></li>
+                <li class="list-group-item"><a href="/index.php">Home</a></li>
                 <li class="list-group-item"><a href="#">Shop</a></li>
                 <li class="list-group-item"><a href="#">Cart</a></li>
                 <li class="list-group-item"><a href="#">About US</a></li>

@@ -5,7 +5,7 @@
 ?>
 <header>
     <nav class="navbar">
-        <li class="title-h"><a href="./INDEX.php">Smart Mart</a></li>
+        <li class="title-h"><a href="./index.php">Smart Mart</a></li>
     </nav>
 </header>
 <div class="login-container h-100">
@@ -47,7 +47,7 @@
                                 <?php  echo $errors['password']; ?></div>
                             <div class="form-group h-100">
                                 <div><a href="#">Forget Password</a>|<a href="./Login.php">Login</a> | <a
-                                        href="./INDEX.php">
+                                        href="./index.php">
                                         Return to Home Page </div><br>
                                 </a>
                                 <div><button type="submit" name="signup" class="wbutton">Signup</button></div>
@@ -78,7 +78,7 @@
                                 </div>
                             </form>
                             <div class="border-top">
-                                <a href="./INDEX.php">
+                                <a href="./index.php">
                                     <h5 class="lead">Return to Home Page</h5>
                                 </a>
                             </div>

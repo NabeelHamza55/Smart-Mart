@@ -158,49 +158,59 @@ if (isset($_SESSION['cart'])) {
 
                     <div class="container bg-light p-3 rounded">
                         <h5>Select Payment Method</h5>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="cod" name="pay_method" id="cod"
-                                onclick="test(0)" checked>
-                            <label class="form-check-label" for="flexRadioDefault1">
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" value="cod" name="pay_method" id="cod"
+                                onclick="test(1)" checked>
+                            <label class="custom-control-label" for="cod">
                                 Cash on Delivery
                             </label>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" value="jazz_easy_pay" name="pay_method"
-                                id="pay_method" onclick="test(1)">
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" value="jazz_easy_pay" name="pay_method"
+                                id="pay_method" onclick="test(2)">
 
-                            <label class="form-check-label" for="flexRadioDefault1">
+                            <label class="custom-control-label" for="pay_method">
                                 Via JazzCash / EasyPaisa
                             </label>
                         </div>
-                        <br>
-                        <div class="container d-none" id="jazz_easy">
-                            <div class="form-group row align-items-center">
-                                <span class="col-3" for="easy_jazz">jazz_cash/Easy_Paisa:</span>
-                                <input type="text" name="easy_jazz" id="easy_jazz" value="03054606260"
-                                    class="form-control col-9 disable" placeholder="" aria-describedby="helpId"
-                                    disabled>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group h-100">
-                        <div><button type="submit" value="order_pay" name="order_pay" class="wbutton">Procceed
-                                Payment</button></div>
-                    </div>
-                </form>
-            </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" value="stripe" name="pay_method"
+                                id="stripe" onclick="test(3)">
 
-            <div class="col-xl-3 col-lg-3 col-sm-12 r-s-btn">
-                <h4>Total Payment:
-                    <?php
+                            <label class="custom-control-label" for="stripe">
+                                Via Debit/Visa Card (Stripe)
+                            </label>
+                        </div>
+                        <br>
+                </form>
+                <div class="container d-none" id="jazz_easy">
+                    <div class="form-group row align-items-center">
+                        <span class="col-3" for="easy_jazz">jazz_cash/Easy_Paisa:</span>
+                        <input type="text" name="easy_jazz" id="easy_jazz" value="03054606260"
+                            class="form-control col-9 disable" placeholder="" aria-describedby="helpId" disabled>
+                    </div>
+                </div>
+                <div class="container d-none" id="stripe_method">
+                    ok
+                </div>
+            </div>
+            <br>
+            <div class="form-group h-100">
+                <div><button type="submit" value="order_pay" name="order_pay" class="wbutton">Procceed
+                        Payment</button></div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-3 col-sm-12 r-s-btn">
+            <h4>Total Payment:
+                <?php
                     echo $total;
                ?>
-                </h4>
-            </div>
-
+            </h4>
         </div>
+
     </div>
+</div>
 </div>
 <?php
 }
@@ -213,10 +223,15 @@ $(document).ready(function() {
 });
 
 function test(x) {
-    if (x == 1) {
+    if (x == 2) {
         $('#jazz_easy').removeClass('d-none');
     } else {
         $('#jazz_easy').addClass('d-none');
+    }
+    if (x == 3) {
+        $('#stripe_method').removeClass('d-none');
+    } else {
+        $('#stripe_method').addClass('d-none');
     }
 }
 </script>

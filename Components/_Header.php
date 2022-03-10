@@ -21,13 +21,13 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <li class="title-h"><a href="/INDEX.php">Smart Mart</a></li>
-        <!-- <li class="item <?php echo ($title == "Smart Mart" ? "active" : "") ?> "><a href="/INDEX.php">Home</a></li> -->
+        <li class="title-h"><a href="/index.php">Smart Mart</a></li>
+        <li class="item <?php echo ($title == "Smart Mart" ? "active" : "") ?> "><a href="/index.php">Home</a></li>
         <li class="item <?php echo ($title == "Shop" ? "active" : "") ?> "><a href="/Shop.php">Shop</a></li>
-        <li class="item <?php echo ($title == "Electronics" ? "active" : "") ?>">
-            <div class="btn-group">
-                <a href="/Shop.php?category=Mobiles" class="">Mobiles</a>
-                <!-- <a class=" dropdown-toggle dropdown-toggle-split"
+        <li class="item <?php echo ($title == "Mobiles" ? "active" : "") ?>">
+            <!-- <div class="btn-group"> -->
+            <a href="./Shop.php?category=Mobiles" class="">Mobiles</a>
+            <!-- <a class=" dropdown-toggle dropdown-toggle-split"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="sr-only">Toggle Dropdown</span>
                </a>
@@ -39,16 +39,16 @@
                // if ($row1 > 0) {
                //      while ($company1 = mysqli_fetch_assoc($result1)) {
                //           echo $company1['brand'];
-               //           ?>
+                         ?>
                //      <a class="dropdown-item" href="#"><?php //echo $company1['name']; ?></a>
                      <?php //} } ?>
                </div> -->
-            </div>
+            <!-- </div> -->
         </li>
         <li class="item <?php echo ($title == "Electronics" ? "active" : "") ?>">
-            <div class="btn-group">
-                <a href="/Shop.php?category=Electronics">Electronics</a>
-                <!-- <a class="dropdown-toggle dropdown-toggle-split"
+            <!-- <div class="btn-group"> -->
+            <a href="/Shop.php?category=Electronics">Electronics</a>
+            <!-- <a class="dropdown-toggle dropdown-toggle-split"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="sr-only">Toggle Dropdown</span>
                </a>
@@ -64,7 +64,7 @@
                    //      die('error');
                    // } ?>
                </div> -->
-            </div>
+            <!-- </div> -->
         </li>
         <li class="item">
             <div class="dropdown">

@@ -6,7 +6,7 @@
 ?>
 <header>
     <nav class="navbar">
-        <li class="title-h"><a href="./INDEX.php">Smart Mart</a></li>
+        <li class="title-h"><a href="./index.php">Smart Mart</a></li>
     </nav>
 </header>
 <div class="login-container h-100">
@@ -35,7 +35,7 @@
                             <div class="text-danger " style="font-size: smaller;"><?php  echo $error['password']; ?>
                             </div>
                             <div class="form-group h-100">
-                                <div><a href="./INDEX.php">Return to Home Page</a> |<br> <a href="Signup.php">Create New
+                                <div><a href="./index.php">Return to Home Page</a> |<br> <a href="Signup.php">Create New
                                         Account</a></div><br>
                                 <div><button type="submit" name="login" class="wbutton">Login</button></div>
                             </div>
@@ -63,7 +63,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="border-top"><a href="./INDEX.php"><h5 class="lead">Return to Home Page</h5></a></div>
+                            <div class="border-top"><a href="./index.php"><h5 class="lead">Return to Home Page</h5></a></div>
                         </div>
                     </div> -->
             </div>

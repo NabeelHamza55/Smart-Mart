@@ -1,8 +1,17 @@
 <?php
  #include('./db_connection.php');
-
-  $title = "Shop";
-
+//  $title = 'Shop';
+ if (!empty($_GET["category"])) {
+   $cat = $_GET["category"];
+         if ($cat == 'Mobiles') {
+              $title  = 'Mobiles';
+         }
+         if ($cat == 'Electronics') {
+              $title = 'Electronics';
+         }
+    }else{
+         $title = 'Shop';
+    }
 
 
  session_start();
