@@ -98,6 +98,3 @@ $(document).ready(function() {
     $("#object2_btn").trigger("keyup");
 
 });
-
-
-//

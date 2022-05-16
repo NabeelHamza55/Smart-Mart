@@ -183,6 +183,15 @@ if (isset($_SESSION['cart'])) {
                         </div>
                         <br>
                 </form>
+                <form id="payment-form">
+                    <div id="payment-element">
+                        <!-- Elements will create form elements here -->
+                    </div>
+                    <button class="btn btn-primary" id="submit">Submit</button>
+                    <div id="error-message">
+                        <!-- Display error message to your customers here -->
+                    </div>
+                </form>
                 <div class="container d-none" id="jazz_easy">
                     <div class="form-group row align-items-center">
                         <span class="col-3" for="easy_jazz">jazz_cash/Easy_Paisa:</span>
@@ -191,7 +200,13 @@ if (isset($_SESSION['cart'])) {
                     </div>
                 </div>
                 <div class="container d-none" id="stripe_method">
-                    ok
+
+                    <form action="" method="post">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="<?php echo $public_sKey; ?>" data-amount="<?= $total*100?>" data-name="SmartMart"
+                            data-description="Stripe Checkout" data-currency="pkr">
+                        </script>
+                    </form>
                 </div>
             </div>
             <br>
@@ -233,5 +248,28 @@ function test(x) {
     } else {
         $('#stripe_method').addClass('d-none');
     }
-}
+};
+var clientSecret =
+    "sk_test_51Ka40mAjcEw0DwAAzyenSNcEGViMARHmf2pncLIzHDvQbIkyd65tfz1bngBaktfaFp7YdwPOwzkbQTllAGO6cKwt00zK4tuc72";
+const stripe = Stripe(
+    'pk_test_51Ka40mAjcEw0DwAAl722EWBmScAUk7JDfCFizSi0RtsUZyrF4PC8vVpNIoY0v0E263IKqNMPcLHibHgPXuUa63w000cfDgAhNB');
+(async () => {
+    const response = await fetch('config.php');
+    const {
+        client_secret: clientSecret
+    } = await response.json();
+    // Render the Payment Element using the clientSecret
+})();
+
+const options = {
+    clientSecret: 'sk_test_51Ka40mAjcEw0DwAAzyenSNcEGViMARHmf2pncLIzHDvQbIkyd65tfz1bngBaktfaFp7YdwPOwzkbQTllAGO6cKwt00zK4tuc72',
+
+};
+
+// Set up Stripe.js and Elements to use in checkout form, passing the client secret obtained in step 2
+const elements = stripe.elements(options);
+
+// Create and mount the Payment Element
+const paymentElement = elements.create('payment');
+paymentElement.mount('#payment-element');
 </script>

@@ -6,6 +6,7 @@
  session_start();
  error_reporting(0);
  session_start();
+    include('config.php');
    include('HTML_start.php');
    include('./Components/_Header.php');
    include('./Components/_cart.php');
