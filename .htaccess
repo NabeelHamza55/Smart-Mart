@@ -1,0 +1,54 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Set the base directory (if your project is in a subfolder, set it accordingly)
+# RewriteBase /
+
+# Redirect all requests to index.php, excluding existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Disable directory listing
+Options -Indexes
+
+# Set default character set to UTF-8
+AddDefaultCharset UTF-8
+
+# Protect .htaccess file from being viewed
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Deny access to sensitive files
+<FilesMatch "\.(env|json|log|md|txt|xml)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Prevent access to PHP configuration and source code files
+<FilesMatch "\.(php|phps|phtml|php5|php7|php8)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Security headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-XSS-Protection "1; mode=block"
+Header always append X-Frame-Options SAMEORIGIN
+Header set Content-Security-Policy "default-src 'self';"
+
+# Disable caching for dynamic content
+<FilesMatch "\.(html|php)$">
+    FileETag None
+    Header unset ETag
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
+</FilesMatch>
+
+# Enable gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json
+</IfModule>

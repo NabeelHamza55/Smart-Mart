@@ -1,17 +1,29 @@
 <header>
     <!-- Top Bar -->
+
     <div class="top d-flex flex-wrap justify-content-around">
         <div class="p-1 user-note">
             <h5>Welcome
-                <?php echo $_SESSION['f_name']; ?>
+                <?php echo $_SESSION['f_name'] ?? ''; ?>
             </h5>
         </div>
-        <?php if(!empty($_SESSION['login'])){  ?>
+        <?php if (!empty($_SESSION['login'])) {  ?>
         <div class="p-1 user-panel">
+            <?php
+            if ($_SESSION['user_type'] != 1) {
+                ?>
             <a class="px-2" href="/CheckOut.php">Check Out</a> |
             <a class="px-2" href="/Admin/_profile.php">Profile</a>|
+            <?php
+            } else {
+                ?>
+            <a class="px-2" href="/Admin/_profile.php">Dashboard</a>|
+            <?php
+            }
+            ?>
+
             <a class="px-2" href="/Functions/_logout.php">Logout</a>
-        </div> <?php } else{ ?>
+        </div> <?php } else { ?>
         <div class="p-1 user-panel">
             <a class="px-2" href="/Checkout.php">Check Out</a> |
             <a class="px-2" href="/Login.php">Login</a>|
@@ -39,9 +51,9 @@
                // if ($row1 > 0) {
                //      while ($company1 = mysqli_fetch_assoc($result1)) {
                //           echo $company1['brand'];
-                         ?>
-               //      <a class="dropdown-item" href="#"><?php //echo $company1['name']; ?></a>
-                     <?php //} } ?>
+                ?>
+               //      <a class="dropdown-item" href="#"><?php //echo $company1['name'];?></a>
+                     <?php //} }?>
                </div> -->
             <!-- </div> -->
         </li>
@@ -58,11 +70,11 @@
                    // $rows2 = mysqli_num_rows($result2);
                    // if($rows2 > 0){
                   //    $brand2 = mysqli_fetch_assoc($result2);
-                    ?>
-                    <a class="dropdown-item" href="#!"><?php // echo $brand2['id']; ?></a>
+                ?>
+                    <a class="dropdown-item" href="#!"><?php // echo $brand2['id'];?></a>
                     <?php // }else{
                    //      die('error');
-                   // } ?>
+                   // }?>
                </div> -->
             <!-- </div> -->
         </li>
@@ -88,12 +100,12 @@
             </form>
         </li>
         <li class="item nav-c cart-btn"><a href="/Cart.php">Cart | <span><?php
-               if (isset($_SESSION['cart'])) {
-                    echo count($_SESSION['cart']);
-               }else{
-                    echo "0";
-               }
-          ?></span></a></li>
+                           if (isset($_SESSION['cart'])) {
+                               echo count($_SESSION['cart']);
+                           } else {
+                               echo "0";
+                           }
+                ?></span></a></li>
         <li class="toggle"><span class="bars"></span></li>
     </nav>
 </header>
