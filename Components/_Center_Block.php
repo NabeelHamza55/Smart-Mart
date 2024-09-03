@@ -16,16 +16,17 @@
 
             <div class="row">
                 <div class="col-md-6 col-sm-12 container">
-                    <div class="box3" style="background-image: url(./Inc/MobileSection.png);">
+                    <div class="box3"
+                        style="background-image: url(./Inc/MobileSection.png); background-size: cover; background-position: center; background-repeat: no-repeat;">
                         <a href="./Shop.php?category=Mobiles">
-                            <h1>Mobiles</h1>
+                            <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Mobiles</h1>
                         </a>
                     </div>
                 </div>
                 <div class=" col-md-6 col-sm-12 container">
                     <div class="box4" style="background-image: url(./Inc/ElectronicsSection.png);">
                         <a id="e-btn-load" href="/Shop.php?category=Electronics">
-                            <h1 class>Electronics</h1>
+                            <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Electronics</h1>
                         </a>
                     </div>
                 </div>
